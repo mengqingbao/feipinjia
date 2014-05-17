@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/u0_normal"  >
+
+    <RelativeLayout
+        android:id="@+id/care_result_rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_bg"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/care_result_btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/selector_btn_back"
+            android:onClick="cancel"
+            android:paddingLeft="10dp"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/care_result_add_chat"
+            style="@drawable/selector_btn_add"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_btn_add"
+            android:paddingRight="10dp"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="诊：头痛"
+            android:textColor="#ffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/care_result_rl_layout2"
+        android:layout_below="@+id/care_result_rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="李东恒医生 诊于12月20日上午10:00" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/care_result_rl_layout3"
+        android:layout_below="@+id/care_result_rl_layout2"
+        android:layout_above="@+id/care_result_rl_layout4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/care_result_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/care_result_rl_layout4"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/maintab_toolbar_bg"
+        android:gravity="center|center_vertical" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:background="@drawable/doctor_search_btn" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享"
+            android:layout_toRightOf="@+id/button1"
+            android:background="@drawable/doctor_search_btn" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用" 
+            android:layout_toRightOf="@+id/button2"
+            android:background="@drawable/doctor_search_btn"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

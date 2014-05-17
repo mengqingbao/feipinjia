@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/u0_normal" >
+
+    <RelativeLayout
+        android:id="@+id/doctor_search_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_bg"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/doctor_search_btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/selector_btn_back"
+            android:onClick="cancel"
+            android:paddingLeft="10dp"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/doctor_search_add_chat"
+            style="@drawable/selector_btn_add"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_btn_add"
+            android:paddingRight="10dp"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="附近的医生"
+            android:textColor="#ffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/doctor_search_rl2"
+        android:layout_width="fill_parent"
+         android:layout_below="@+id/doctor_search_rl"
+        android:layout_height="50dp" 
+        android:gravity="center_vertical|left">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/doctor_search_btn"
+            android:layout_marginLeft="15dp"
+            android:text="同城的" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/button1"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/doctor_search_btn"
+            android:text="老中医" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/button2"
+            android:background="@drawable/doctor_search_btn"
+            android:text="民间的" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/doctor_search_rl3"
+         android:layout_below="@+id/doctor_search_rl2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/doctor_search_searchbtn" 
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true">
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/doctor_search_rl4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_below="@+id/doctor_search_rl3">
+
+         <ListView
+             android:id="@+id/doctor_search_list_view"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+         </ListView>
+        
+    </RelativeLayout>
+
+
+</RelativeLayout>

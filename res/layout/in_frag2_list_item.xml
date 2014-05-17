@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag2_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/abc_list_selector_holo_dark"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/frag2_list_item_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/in_fr2_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/moren" />
+    </RelativeLayout>
+
+    <RelativeLayout
+         android:id="@+id/frag2_list_item_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_toRightOf="@+id/frag2_list_item_1"
+        android:layout_toLeftOf="@+id/frag2_list_item_3"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:id="@+id/frag2_list_item_2_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/in_fr2_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="感冒"
+                android:textColor="@drawable/abc_list_selector_text_blue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/in_fr2_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:text="使用 390/96%"
+                android:textColor="@drawable/abc_list_selector_text_blue"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/in_fr2_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frag2_list_item_2_1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:textStyle="normal"
+            android:text="大便难，便不尽"
+            android:textColor="@drawable/abc_list_selector_text_9a9a9a"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frag2_list_item_3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" 
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/in_fr_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:textColor="@drawable/abc_list_selector_text_9a9a9a"
+            android:text=" > " />
+    </RelativeLayout>
+</RelativeLayout>

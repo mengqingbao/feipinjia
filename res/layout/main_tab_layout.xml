@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/u0_normal">
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/u20_normal">
+	<TabWidget   
+            android:id="@android:id/tabs"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  
+            android:orientation="horizontal"
+            android:showDividers="end"
+            android:divider="#222"/>          
+    </android.support.v4.app.FragmentTabHost>
+    
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+	<GridView android:id="@+id/mygridview"   
+      android:numColumns="3"   
+      android:gravity="center"   
+      android:layout_width="wrap_content"   
+      android:layout_height="wrap_content"    
+      android:stretchMode="columnWidth" 
+      android:background="@drawable/selector_tab_background"
+    />  
+
+</LinearLayout>

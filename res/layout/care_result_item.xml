@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag2_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/abc_list_selector_holo_dark"
+    android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/care_result_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/frag2_list_item_2_1"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="症状"
+            android:textColor="@drawable/abc_list_selector_text_blue"
+            android:textSize="18sp" />
+		<TextView
+	        android:id="@+id/care_result_tv2"
+	        android:layout_toRightOf="@+id/care_result_tv1"
+	        android:layout_toLeftOf="@+id/care_result_more"
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:textSize="16sp" 
+	        android:gravity="center_vertical"
+	        android:textColor="@drawable/abc_list_selector_text_9a9a9a"
+	        android:text="11月22号" />
+
+		<TextView
+		    android:id="@+id/care_result_more"
+		    android:layout_width="30dp"
+		    android:layout_height="50dp"
+		    android:textColor="@drawable/abc_list_selector_text_blue"
+		    android:gravity="center_vertical"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+		    android:text=">" />
+
+</RelativeLayout>

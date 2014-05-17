@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/u0_normal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        	<GridView android:id="@+id/menu_gridview"   
+		      android:numColumns="3"   
+		      android:gravity="center"   
+		      android:layout_width="wrap_content"   
+		      android:layout_height="wrap_content"  
+		      android:verticalSpacing="20dp"  
+     		  android:horizontalSpacing="10dp"    
+		      android:stretchMode="columnWidth" 
+		      android:background="@drawable/selector_tab_background"
+		    />  
+	    </LinearLayout>
+		 <RelativeLayout
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_below="@+id/linearLayout1" >
+        	 <ImageView
+		         android:id="@+id/imageView1"
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:src="@drawable/fei_pin_a_17" />
+
+		     <ImageView
+		         android:id="@+id/imageView2"
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:src="@drawable/fei_pin_a_17" 
+		         android:layout_below="@+id/imageView1"/>
+
+		     <ImageView
+		         android:id="@+id/imageView3"
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:src="@drawable/fei_pin_a_17"
+		         android:layout_below="@+id/imageView2" />
+		 </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/in_user_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/doctor_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/moren" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/doctor_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/u_avatar"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"
+            android:textColor="#000066"
+            android:text="张仲景" />
+        <TextView
+            android:id="@+id/doctor_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9A9A9A"
+            android:layout_marginLeft="15dp"
+            android:text="100米以内" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#9A9A9A"
+            android:text="疑难杂症" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|right"
+        >
+
+        <TextView
+            android:id="@+id/docor_record"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="12sp"
+            android:text="答 389/96%\n诊 214/98%"
+            android:textColor="#333"
+            android:layout_marginBottom="10dp"
+           android:gravity="bottom"/>
+
+    </LinearLayout>
+
+</LinearLayout>

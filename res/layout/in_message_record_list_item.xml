@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/in_user_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal" 
+    android:background="@drawable/abc_list_selector_holo_dark">
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+        <ImageView android:id="@+id/mr_avatar" android:layout_width="50dp" android:layout_height="50dp" android:layout_alignParentLeft="true" android:layout_marginLeft="5dp" android:src="@drawable/moren" /></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_toRightOf="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/mr_nick"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="张仲景"
+                    android:textColor="@drawable/abc_list_selector_text_blue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mr_TextView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="前天下午"
+                    android:textColor="@drawable/abc_list_selector_text_9a9a9a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl22"
+                android:layout_below="@+id/rl21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/mr_TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="问:肚子疼"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/abc_list_selector_text_9a9a9a"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/mr_TextView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="有效"
+                    android:textColor="@drawable/abc_list_selector_text_blue"
+                    android:layout_alignParentRight="true"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

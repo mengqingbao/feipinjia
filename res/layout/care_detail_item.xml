@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/frag2_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/cm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="发烧"
+        android:textColor="#000066" />
+
+    <RelativeLayout
+        android:id="@+id/cm_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/cm_name" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:checked="true"
+                android:text="不烧" 
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="12sp"
+                android:button="@drawable/radio_button_selector" 
+                />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="高烧"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000" 
+                android:textSize="12sp"
+                android:button="@drawable/radio_button_selector" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="不烧"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:button="@drawable/radio_button_selector"  />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</RelativeLayout>
