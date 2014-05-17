@@ -10,9 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.feipinjia.adapter.Fr3ListAdapter;
+import com.feipinjia.adapter.TreeViewAdapter;
 import com.feipinjia.listener.Fr3ItemOnClickListener;
 import com.feipinjia.model.Config;
 import com.feipinjia.model.StringVar;
@@ -26,66 +30,58 @@ public class FragmentPage3 extends Fragment  implements OnClickListener{
 	private View view ;
 	//private ListView listView;
 	//private Fr3ListAdapter adapter;
+	private ExpandableListView expandableList;  
+    private TreeViewAdapter adapter;
+    private String[] groups = { "热门城市", "B", "C"};  
+    private String[][]  child= {  
+            { "北京", "上海", "广州", "南京" },  
+            { "北京", "江苏", "广西"},  
+            { "成都", "重庆" }  
+    };  
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		 view= inflater.inflate(R.layout.fragment_3, container, false);
-
-		// listView = (ListView) view.findViewById(R.id.fragment_3_list);
-		 //adapter=createAdpater(1);
-     /*    listView.setAdapter(adapter);
-         listView.setOnItemClickListener(new Fr3ItemOnClickListener(this.getActivity()));
-         init(view);*/
+		 adapter=new TreeViewAdapter(this.getActivity().getApplicationContext(),TreeViewAdapter.PaddingLeft>>1);  
+	     expandableList=(ExpandableListView) view.findViewById(R.id.cityTableListView); 
+	     initExpandableListView();
          return view;		
 	}	
 	
-	public void init(View view){
-		/*btn1=(Button) view.findViewById(R.id.fr3_ly_btn1);
-		btn2=(Button) view.findViewById(R.id.fr3_ly_btn2);*/
-		//btn1.setBackground(R.drawable.u37_normal);
-		//btn1.setOnClickListener(this);
-	//	btn2.setOnClickListener(this);
-		//btn1.setBackgroundResource(R.drawable.u37_normal);
-	}
+	
 
+	public void initExpandableListView(){
+		List<TreeViewAdapter.TreeNode> treeNode = adapter.GetTreeNode();  
+        for(int i=0;i<groups.length;i++)  
+        {  
+            TreeViewAdapter.TreeNode node=new TreeViewAdapter.TreeNode();  
+            node.parent=groups[i];  
+            for(int ii=0;ii<child[i].length;ii++)  
+            {  
+                node.childs.add(child[i][ii]);  
+            }  
+            treeNode.add(node);  
+        }  
+          
+        adapter.UpdateTreeNode(treeNode);       
+        expandableList.setAdapter(adapter);  
+        expandableList.setOnChildClickListener(new OnChildClickListener(){  
+
+            @Override  
+            public boolean onChildClick(ExpandableListView arg0, View arg1,  
+                    int parent, int children, long arg4) {  
+                  
+                String str="parent id:"+String.valueOf(parent)+",children id:"+String.valueOf(children);  
+                Toast.makeText(FragmentPage3.this.getActivity().getApplicationContext(), str, 300).show();  
+                return false;  
+            }  
+        });
+	}
+  
+   
 	@Override
-	public void onClick(View view) {
-		/*switch (view.getId()) {
-		case R.id.fr3_ly_btn1:
-			doctor();
-			break;
-		case R.id.fr3_ly_btn2:
-			drugStore();
-			break;
-		}*/
-	}
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		
+	}  
 	
-	public void drugStore(){
-		//listView.setAdapter(createAdpater(2));
-		//adapter.notifyDataSetChanged();
-	//	btn1.setBackgroundResource(R.drawable.u35_normal);
-		//btn2.setBackgroundResource(R.drawable.u37_normal);
-	}
-	
-	public void doctor(){
-		//listView.setAdapter(createAdpater(1));
-		//adapter.notifyDataSetChanged();
-		//btn1.setBackgroundResource(R.drawable.u37_normal);
-		//btn2.setBackgroundResource(R.drawable.u35_normal);
-	}
-	
-	public Fr3ListAdapter createAdpater(int type){
-		List<Config> cfgs=ConfigStroe.getInstance().queryPageList(0, 10, this.getActivity(),type);
-		List<StringVar> list=new ArrayList<StringVar>();
-		for (Config cfg:cfgs) {
-			StringVar sv = new StringVar();
-			sv.setStr1(cfg.getTitle());
-			if(cfg.getExta()>0){
-				sv.setStr2(cfg.getExta()+cfg.getDesc());
-			}else{
-				sv.setStr2(cfg.getDesc());
-			}
-			list.add(sv);
-		}
-         return new Fr3ListAdapter(this.getActivity(),R.layout.in_frag3_list_item,list);
-	}
 }
